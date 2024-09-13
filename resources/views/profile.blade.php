@@ -9,5 +9,6 @@
     <h1>Ini Halaman Profile</h1>
 
     <h1>nama: {{ $nama }}</h1>
+    <h1>nama: {{ $npm }}</h1>
 </body>
 </html>
