@@ -10,5 +10,6 @@
 
     <h1>nama: {{ $nama }}</h1>
     <h1>nama: {{ $npm }}</h1>
+    <h1>Kelas:{{ $nama_kelas?? 'Kelas tidak ditemukan'}} </h1>
 </body>
 </html>
