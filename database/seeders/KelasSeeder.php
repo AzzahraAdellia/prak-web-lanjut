@@ -11,7 +11,7 @@ class KelasSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         $data = [
             'A',
@@ -19,9 +19,9 @@ class KelasSeeder extends Seeder
             'C',
             'D',
         ];
-        foreach ($data as $kelas) {
+        foreach ($data as $kelas){
             Kelas::create([
-                'nama_kelas' => $kelas,
+                'nama_kelas'=>$kelas,
             ]);
         }
     }

@@ -6,9 +6,10 @@
     <title>Profil User</title>
 </head>
 <body>
-    <h1>Profil User</h1>
-    <p>Nama: {{ $nama }}</p>
-    <p>NPM: {{ $npm }}</p>
-    <p>Kelas: {{ $nama_kelas ?? 'Kelas tidak ditemukan' }}</p>
+    <h1>Ini Halaman Profile</h1>
+
+    <h1>nama: {{ $nama }}</h1>
+    <h1>nama: {{ $npm }}</h1>
+    <h1>Kelas:{{ $nama_kelas?? 'Kelas tidak ditemukan'}} </h1>
 </body>
 </html>
