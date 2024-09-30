@@ -18,8 +18,18 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required|string|max:255',
             'npm' => 'required|string|max:255',
-            'kelas_id' => 'required|exists:kelas,id', 
+            'kelas_id' => 'required|exists:kelas,id',
         ]);
+
+        $user = UserModel::create($validatedData);
+
+        $user->load('kelas');
+
+        $data = [
+            'nama' => $user->nama,
+            'npm' => $user->npm,
+            'nama_kelas' => $user->kelas->nama_kelas 
+        ];
 
         $user = UserModel::create($validatedData);
 
