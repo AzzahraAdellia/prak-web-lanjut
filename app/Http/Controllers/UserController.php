@@ -31,6 +31,14 @@ class UserController extends Controller
             'nama_kelas' => $user->kelas->nama_kelas 
         ];
 
-        return view('profile', $data);
+        $user = UserModel::create($validatedData);
+
+        $user->load('kelas');   
+
+        return view('profile', [
+            'nama' => $user->nama,
+            'npm' => $user->npm,
+            'nama_kelas' => $user->kelas->nama_kelas ?? 'Kelas tidak ditemukan',
+        ]);
     }
 }
